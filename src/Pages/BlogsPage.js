@@ -5,6 +5,8 @@ import { Footer } from '../Components/Footer';
 import BlogCard from '../Components/BlogCard';
 import { blogService, siteService } from '../services/api';
 import blogsData from '../Data/blogsData';
+import SEO from '../Components/SEO';
+import { seoConfig } from '../config/seo-config';
 import './BlogsPage.css';
 
 const BlogsPage = () => {
@@ -73,10 +75,7 @@ const BlogsPage = () => {
 
   return (
     <div className="blogs-page-container" id="blogs-page">
-      <Helmet>
-        <title>Industry Insights | Blue Panda Blog</title>
-        <meta name="description" content="Explore the latest strategies, trends, and data-driven marketing insights from the Blue Panda team. Stay ahead in Marketing, Design, and Tech." />
-      </Helmet>
+      <SEO {...seoConfig.blog} />
 
       {/* Floating Background Blobs for Visual Depth */}
       <div className="bg-blobs-container">
