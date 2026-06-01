@@ -1,0 +1,104 @@
+.testimonials-section {
+  background: linear-gradient(135deg, #050a14 0%, #0d1b2e 100%);
+  padding: 120px 20px;
+  font-family: "Segoe UI", Arial, sans-serif;
+  color: #ffffff;
+  position: relative;
+  overflow: hidden;
+}
+
+.testimonials-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.testimonials-header {
+  text-align: center;
+  margin-bottom: 70px;
+}
+
+.testimonials-subtitle {
+  color: #4a9eff;
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.testimonials-title {
+  font-size: 42px;
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0;
+  letter-spacing: -0.5px;
+}
+
+.testimonials-grid {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.testimonial-card {
+  background: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  padding: 45px 30px;
+  flex: 1;
+  min-width: 300px;
+  max-width: 380px;
+  text-align: center;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.testimonial-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(74, 158, 255, 0.25);
+  background: rgba(255, 255, 255, 0.04);
+  box-shadow: 0 20px 45px rgba(74, 158, 255, 0.06), 0 15px 30px rgba(0, 0, 0, 0.25);
+}
+
+.testimonial-card-title {
+  color: #4a9eff;
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  line-height: 1.3;
+}
+
+.testimonial-card-text {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 14px;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .testimonials-grid {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .testimonials-section {
+    padding: 80px 20px;
+  }
+
+  .testimonials-title {
+    font-size: 28px;
+  }
+
+  .testimonial-card {
+    min-width: 100%;
+    max-width: 100%;
+    padding: 35px 20px;
+  }
+}

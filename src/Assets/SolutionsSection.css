@@ -1,0 +1,211 @@
+.solutions-section {
+  background: linear-gradient(135deg, #050a14 0%, #0d1b2e 100%);
+  padding: 120px 20px;
+  font-family: "Segoe UI", Arial, sans-serif;
+  color: #ffffff;
+  position: relative;
+  overflow: hidden;
+}
+
+.solutions-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.solutions-title {
+  text-align: center;
+  font-size: 42px;
+  margin-bottom: 70px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  color: #ffffff;
+}
+
+.degree {
+  font-weight: normal;
+}
+
+.solutions-grid {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  align-items: stretch;
+}
+
+.solution-card {
+  flex: 1;
+  min-width: 300px;
+  max-width: 350px;
+  border-radius: 24px;
+  padding: 45px 30px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+/* Glassmorphic Card Styles */
+.card-light {
+  background: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  color: #ffffff;
+}
+
+.card-light:hover {
+  transform: translateY(-8px);
+  border-color: rgba(74, 158, 255, 0.25);
+  background: rgba(255, 255, 255, 0.04);
+  box-shadow: 0 25px 45px rgba(74, 158, 255, 0.06), 0 15px 30px rgba(0, 0, 0, 0.25);
+}
+
+.card-light .card-title {
+  color: #ffffff;
+}
+
+.card-light .icon-wrapper {
+  color: #4a9eff;
+}
+
+.card-light .card-divider {
+  border-top: 1px dashed rgba(255, 255, 255, 0.15);
+}
+
+.card-light .choose-btn {
+  background-color: transparent;
+  color: #4a9eff;
+  border: 1px solid rgba(74, 158, 255, 0.3);
+}
+
+.card-light .choose-btn:hover {
+  background-color: #4a9eff;
+  color: #ffffff;
+  border-color: #4a9eff;
+  box-shadow: 0 8px 20px rgba(74, 158, 255, 0.25);
+}
+
+/* Dark Theme (Featured Card) Styles */
+.card-dark {
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  color: #ffffff;
+  border: 1px solid rgba(74, 158, 255, 0.35);
+  box-shadow: 0 25px 55px rgba(74, 158, 255, 0.12), inset 0 0 15px rgba(74, 158, 255, 0.05);
+  transform: scale(1.03);
+}
+
+.card-dark:hover {
+  transform: scale(1.05) translateY(-8px);
+  border-color: #4a9eff;
+  box-shadow: 0 30px 60px rgba(74, 158, 255, 0.2), 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+.card-dark .card-title {
+  color: #ffffff;
+}
+
+.card-dark .icon-wrapper {
+  color: #4a9eff;
+}
+
+.card-dark .card-divider {
+  border-top: 1px dashed rgba(74, 158, 255, 0.3);
+}
+
+.card-dark .choose-btn {
+  background: linear-gradient(90deg, #4a9eff 0%, #8b5cf6 100%);
+  color: #ffffff;
+  border: none;
+  box-shadow: 0 6px 15px rgba(74, 158, 255, 0.2);
+}
+
+.card-dark .choose-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(139, 92, 246, 0.4);
+}
+
+/* Common Card Elements */
+.card-title {
+  font-size: 24px;
+  margin-bottom: 30px;
+  line-height: 1.25;
+  font-weight: 800;
+  max-width: 90%;
+  color: #ffffff;
+}
+
+.card-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 30px 0;
+  flex-grow: 1;
+}
+
+.list-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 18px;
+  font-size: 14px;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.icon-wrapper {
+  margin-right: 12px;
+  display: flex;
+  align-items: center;
+}
+
+.check-icon {
+  width: 18px;
+  height: 18px;
+}
+
+.card-divider {
+  width: 100%;
+  height: 1px;
+  margin-bottom: 25px;
+}
+
+.choose-btn {
+  width: 100%;
+  padding: 14px;
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .solutions-grid {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .solution-card {
+    width: 100%;
+    max-width: 400px;
+    transform: none !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .solutions-section {
+    padding: 80px 15px;
+  }
+
+  .solutions-title {
+    font-size: 28px;
+  }
+}

@@ -1,0 +1,116 @@
+.stats-section {
+  background: linear-gradient(135deg, #050a14 0%, #0d1b2e 100%);
+  padding: 120px 20px;
+  font-family: "Segoe UI", Arial, sans-serif;
+  color: #ffffff;
+  position: relative;
+  overflow: hidden;
+}
+
+.stats-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.stats-header {
+  margin-bottom: 70px;
+}
+
+.stats-title {
+  font-size: 42px;
+  font-weight: 800;
+  margin-bottom: 18px;
+  color: #ffffff;
+  letter-spacing: -0.5px;
+}
+
+.stats-description {
+  font-size: 15px;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.7);
+  max-width: 750px;
+  margin: 0 auto;
+}
+
+.stats-grid {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.stat-card {
+  background: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  padding: 45px 25px;
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.stat-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(74, 158, 255, 0.25);
+  background: rgba(255, 255, 255, 0.04);
+  box-shadow: 0 20px 45px rgba(74, 158, 255, 0.06), 0 15px 30px rgba(0, 0, 0, 0.25);
+}
+
+.stat-number {
+  font-size: 46px;
+  font-weight: 800;
+  color: #4a9eff;
+  margin: 0 0 12px 0;
+  text-shadow: 0 0 15px rgba(74, 158, 255, 0.2);
+  letter-spacing: -1px;
+}
+
+.stat-label {
+  font-size: 14px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.85);
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .stats-grid {
+    gap: 20px;
+  }
+
+  .stat-card {
+    width: calc(50% - 20px);
+    max-width: 250px;
+  }
+}
+
+@media (max-width: 600px) {
+  .stats-section {
+    padding: 80px 15px;
+  }
+
+  .stats-title {
+    font-size: 28px;
+  }
+
+  .stat-card {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .stats-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+}

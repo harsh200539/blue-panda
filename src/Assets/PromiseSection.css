@@ -1,0 +1,250 @@
+.promise-section {
+  background: linear-gradient(135deg, #050a14 0%, #0d1b2e 100%);
+  padding: 120px 20px;
+  font-family: "Segoe UI", Arial, sans-serif;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.promise-section::before {
+  content: '';
+  position: absolute;
+  top: 10%;
+  left: -5%;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(74, 158, 255, 0.06) 0%, rgba(0,0,0,0) 70%);
+  z-index: 1;
+}
+
+.promise-container {
+  max-width: 1200px;
+  width: 100%;
+  position: relative;
+  z-index: 2;
+}
+
+.promise-header-mobile {
+  display: none;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.promise-subtitle {
+  color: #4a9eff;
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.promise-subtitle-desktop {
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  position: absolute;
+  top: -45px;
+  left: 0;
+  color: #4a9eff;
+  letter-spacing: 2px;
+}
+
+.promise-content-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+}
+
+.promise-image-column {
+  flex: 0 0 450px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  z-index: 2;
+  align-self: stretch;
+}
+
+.promise-panda-img {
+  width: auto;
+  max-width: 450px;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 15px 30px rgba(0, 0, 0, 0.6));
+  animation: bobPanda 5s ease-in-out infinite;
+}
+
+@keyframes bobPanda {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-12px) rotate(1deg); }
+}
+
+.promise-text-column {
+  flex: 1;
+  max-width: 650px;
+}
+
+.promise-card {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 24px;
+  padding: 50px;
+  color: #ffffff;
+  position: relative;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+}
+
+.promise-title {
+  color: #ffffff;
+  font-size: 38px;
+  font-weight: 800;
+  line-height: 1.25;
+  margin-bottom: 20px;
+  letter-spacing: -0.5px;
+}
+
+.promise-description {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 15px;
+  line-height: 1.7;
+  margin-bottom: 30px;
+  max-width: 95%;
+}
+
+.promise-features {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+.promise-feature-item {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.promise-feature-icon {
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: rgba(74, 158, 255, 0.1);
+  border: 1px solid rgba(74, 158, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.promise-feature-icon svg path {
+  stroke: #4a9eff !important;
+}
+
+.promise-feature-icon svg fill {
+  fill: #4a9eff !important;
+}
+
+.promise-feature-icon svg circle {
+  stroke: #4a9eff !important;
+}
+
+.promise-feature-content {
+  flex: 1;
+}
+
+.promise-feature-title {
+  color: #4a9eff;
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.promise-feature-desc {
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 13px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.promise-btn {
+  background: linear-gradient(90deg, #4a9eff 0%, #8b5cf6 100%);
+  color: white;
+  border: none;
+  padding: 14px 36px;
+  font-size: 14px;
+  font-weight: 700;
+  border-radius: 30px;
+  cursor: pointer;
+  text-transform: uppercase;
+  box-shadow: 0 8px 20px rgba(74, 158, 255, 0.25);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  letter-spacing: 1px;
+}
+
+.promise-btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 25px rgba(139, 92, 246, 0.4);
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+  .promise-content-wrapper {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .promise-image-column {
+    margin-bottom: 0;
+    flex: 0 0 auto;
+  }
+
+  .promise-panda-img {
+    max-width: 250px;
+  }
+
+  .promise-text-column {
+    width: 100%;
+  }
+
+  .promise-subtitle-desktop {
+    position: static;
+    margin-bottom: 15px;
+    display: block;
+  }
+
+  .promise-title {
+    margin-bottom: 12px;
+  }
+
+  .promise-description {
+    display: block;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .promise-section {
+    padding: 80px 15px;
+  }
+
+  .promise-card {
+    padding: 30px 20px;
+    margin-top: 10px;
+  }
+
+  .promise-title {
+    font-size: 30px;
+    margin-bottom: 12px;
+  }
+
+  .promise-panda-img {
+    max-width: 200px;
+  }
+}

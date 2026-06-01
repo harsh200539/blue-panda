@@ -1,0 +1,26 @@
+.blog-page-image {
+    width: 100%;
+    max-width: 100vw;
+    height: auto;
+    display: block;
+}
+
+.blog-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-size: large;
+    text-align: center;
+}
+
+.blog-page h4 {
+    font-size: 17px;
+}
+
+@media (max-width: 768px) {
+    .blog-page {
+        font-size: medium;
+    }
+}
