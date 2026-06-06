@@ -102,3 +102,13 @@
     padding: 35px 20px;
   }
 }
+
+.testimonial-position {
+  display: block;
+  margin: -8px 0 16px;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}

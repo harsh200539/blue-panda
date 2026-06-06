@@ -1,12 +1,13 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import "../Assets/ServiceSection.css"
+import { siteService } from '../services/api';
 import graphicDesign from '../Images/graphic_design.png';
 import uiUxDesign from '../Images/ui_ux_design.png';
 import socialMedia from '../Images/social_media.png';
 import videoEditing from '../Images/video_editing.png';
 import webDevelopment from '../Images/web_development.png';
 const ServicesSection = () => {
-  const services = [
+  const fallbackServices = [
     {
       title: "Graphic Designing",
       description: "Creative Visuals That Define Your Brand And Attract The Right Audience.",
@@ -33,6 +34,22 @@ const ServicesSection = () => {
       iconUrl: webDevelopment // Replace with your actual image URL
     }
   ];
+  const [services, setServices] = useState(fallbackServices);
+
+  useEffect(() => {
+    siteService.getServices()
+      .then((response) => {
+        const apiServices = response.data.results || response.data;
+        if (apiServices.length) {
+          setServices(apiServices.map((service, index) => ({
+            ...service,
+            iconUrl: service.image || service.image_url || fallbackServices[index]?.iconUrl,
+          })));
+        }
+      })
+      .catch((error) => console.error('Error fetching services:', error));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return (
     <section className="services-section">
@@ -57,7 +74,7 @@ const ServicesSection = () => {
           </div>
           
           <div className="services-row row-bottom">
-            {services.slice(2, 5).map((service, index) => (
+            {services.slice(2).map((service, index) => (
               <div key={index + 2} className="service-card" data-aos="zoom-in" data-aos-delay={(index + 2) * 100} data-aos-duration="700">
                 <div className="service-icon-wrapper">
                   <img src={service.iconUrl || "/placeholder.svg"} alt={service.title} className="service-icon-img" />

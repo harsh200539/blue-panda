@@ -5,9 +5,16 @@ from ckeditor.fields import RichTextField
 
 class Blog(models.Model):
     CATEGORY_CHOICES = [
-        ('Marketing', 'Marketing'),
-        ('Design', 'Design'),
-        ('Tech', 'Tech'),
+        ('SEO & Search', 'SEO & Search'),
+        ('Social Media Marketing', 'Social Media Marketing'),
+        ('Paid Advertising (PPC)', 'Paid Advertising (PPC)'),
+        ('Content Marketing', 'Content Marketing'),
+        ('Branding & Identity', 'Branding & Identity'),
+        ('Website & Conversion Optimizations', 'Website & Conversion Optimizations'),
+        ('Email Marketing', 'Email Marketing'),
+        ('Analytics & Reporting', 'Analytics & Reporting'),
+        ('Local Marketing', 'Local Marketing'),
+        ('Digital Marketing for Industries', 'Digital Marketing for Industries'),
     ]
 
     title = models.CharField(max_length=255)

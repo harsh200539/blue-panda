@@ -1,0 +1,58 @@
+.admin-page, .admin-login-page, .admin-loading {
+  min-height: 100vh;
+  background: #07101f;
+  color: #edf5ff;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+.admin-loading, .admin-login-page { display: grid; place-items: center; padding: 24px; }
+.admin-login-card, .admin-form { background: #0d1b2e; border: 1px solid #203753; border-radius: 20px; padding: 28px; box-shadow: 0 24px 70px rgba(0,0,0,.28); }
+.admin-login-card { width: min(440px, 100%); display: grid; gap: 18px; }
+.admin-login-card h1, .admin-sidebar h1, .admin-header h2, .admin-form h3 { margin: 4px 0; }
+.admin-login-card p, .admin-list-item p { color: #9db0c8; margin: 0; }
+.admin-kicker { color: #56a8ff; font-size: 12px; font-weight: 800; letter-spacing: 1.5px; text-transform: uppercase; }
+.admin-login-card label, .admin-form label { display: grid; gap: 8px; color: #b9c9dc; font-size: 13px; font-weight: 700; }
+.admin-login-card input, .admin-form input:not([type="checkbox"]), .admin-form textarea, .admin-form select { width: 100%; border: 1px solid #29415f; border-radius: 10px; background: #07101f; color: #fff; padding: 12px; font: inherit; }
+.admin-form input[type="checkbox"] { width: 22px; height: 22px; accent-color: #4a9eff; }
+.admin-form textarea { min-height: 110px; resize: vertical; }
+.admin-form .admin-editor textarea { min-height: 280px; font-family: Consolas, monospace; }
+.admin-primary { border: 0; border-radius: 10px; padding: 12px 18px; background: linear-gradient(90deg, #258ef4, #7957e8); color: #fff; font-weight: 800; cursor: pointer; }
+.admin-primary:disabled { opacity: .6; cursor: wait; }
+
+.admin-page { display: grid; grid-template-columns: 250px 1fr; }
+.admin-sidebar { position: sticky; top: 0; height: 100vh; padding: 28px 20px; background: #091526; border-right: 1px solid #1c3049; display: flex; flex-direction: column; gap: 28px; }
+.admin-sidebar nav { display: grid; gap: 8px; }
+.admin-sidebar button, .admin-sidebar a, .admin-actions button, .admin-form-heading button { border: 0; background: transparent; color: #a9bdd5; text-align: left; padding: 10px 12px; border-radius: 9px; cursor: pointer; text-decoration: none; font: inherit; }
+.admin-sidebar nav button.active { background: #173555; color: #fff; }
+.admin-user { margin-top: auto; display: grid; gap: 8px; font-size: 13px; }
+.admin-user span { color: #7991ac; }
+.admin-user a { color: #66b3ff; padding-left: 0; }
+.admin-user button { padding-left: 0; }
+.admin-workspace { padding: 36px; max-width: 1300px; width: 100%; margin: 0 auto; }
+.admin-header, .admin-form-heading, .admin-list-item { display: flex; align-items: center; justify-content: space-between; gap: 18px; }
+.admin-count { background: #152a43; color: #93c8ff; padding: 8px 12px; border-radius: 999px; font-size: 13px; }
+.admin-alert { margin: 18px 0; padding: 12px 15px; border-radius: 10px; }
+.admin-alert.success { background: #103a31; color: #83e6c2; }
+.admin-alert.error { background: #461f2b; color: #ffb4c3; }
+.admin-form { margin: 24px 0; }
+.admin-form-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; margin: 22px 0; }
+.admin-form-grid .wide { grid-column: 1 / -1; }
+.admin-form-heading button { color: #8fc5ff; }
+.admin-list { display: grid; gap: 10px; }
+.admin-list-item { padding: 18px 20px; border: 1px solid #1d3550; border-radius: 14px; background: #0b192b; }
+.admin-list-item h3 { margin: 0 0 6px; font-size: 16px; }
+.admin-actions { display: flex; gap: 6px; }
+.admin-actions button { background: #183552; color: #b8dbff; }
+.admin-actions button.danger { background: #3c1c29; color: #ffadbc; }
+.admin-empty { color: #8ba1bb; text-align: center; padding: 36px; }
+
+@media (max-width: 800px) {
+  .admin-page { display: block; }
+  .admin-sidebar { position: static; height: auto; }
+  .admin-sidebar nav { grid-template-columns: repeat(2, 1fr); }
+  .admin-user { margin-top: 0; }
+  .admin-workspace { padding: 20px; }
+  .admin-form-grid { grid-template-columns: 1fr; }
+  .admin-form-grid .wide { grid-column: auto; }
+  .admin-list-item { align-items: flex-start; flex-direction: column; }
+}

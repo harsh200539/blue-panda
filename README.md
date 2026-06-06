@@ -2,6 +2,10 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Content Admin Documentation
+
+See [CONTENT_ADMIN_USER_GUIDE.md](CONTENT_ADMIN_USER_GUIDE.md) for the shareable guide covering content keys, services, testimonials, blogs, and frontend admin usage.
+
 Download Vscode to run this application
 
 ## Available Scripts

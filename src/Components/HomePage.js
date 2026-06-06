@@ -6,6 +6,7 @@ import { PromiseSection } from './PromiseSection';
 import { SocialMediaSection } from './SocialMediaSection';
 import { StatsSection } from './StatsSection';
 import { SolutionsSection } from './SolutionsSection';
+import { TestimonialsSection } from './TestimonialsSection';
 
 import { ContactSection } from './ContactSection';
 import { Footer } from './Footer';
@@ -32,6 +33,7 @@ const HomePage = () => {
       <SocialMediaSection />
       <StatsSection />
       <SolutionsSection />
+      <TestimonialsSection />
 
       <ContactSection />
       <Footer />

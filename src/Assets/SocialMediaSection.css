@@ -49,8 +49,9 @@
 .sm-central-image-container {
   position: absolute;
   bottom: 5%;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 0;
+  right: 0;
+  margin: 0 auto;
   z-index: 1;
   width: 350px;
   display: flex;
@@ -266,10 +267,11 @@
   .sm-central-image-container {
     position: relative;
     left: auto;
+    right: auto;
     bottom: auto;
     top: 20px;
     transform: none;
-    margin: 40px 0;
+    margin: 40px auto;
     order: 3;
   }
 

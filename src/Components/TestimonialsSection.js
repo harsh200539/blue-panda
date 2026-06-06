@@ -1,7 +1,9 @@
-import "../Assets/TestimonialsSection.css"
+import { useEffect, useState } from "react";
+import "../Assets/TestimonialsSection.css";
+import { siteService } from "../services/api";
 
 const TestimonialsSection = () => {
-  const testimonials = [
+  const fallbackTestimonials = [
     {
       id: 1,
       title: "It was a very good experience",
@@ -18,6 +20,16 @@ const TestimonialsSection = () => {
       text: "The customer is very important, the customer will be followed by the customer. Cursus nibh mauris, nor turpis orci lectus maecenas. But it needs a great deal of attention in the school.",
     },
   ]
+  const [testimonials, setTestimonials] = useState(fallbackTestimonials);
+
+  useEffect(() => {
+    siteService.getTestimonials()
+      .then((response) => {
+        const apiTestimonials = response.data.results || response.data;
+        if (apiTestimonials.length) setTestimonials(apiTestimonials);
+      })
+      .catch((error) => console.error('Error fetching testimonials:', error));
+  }, []);
 
   return (
     <section className="testimonials-section">
@@ -30,7 +42,8 @@ const TestimonialsSection = () => {
         <div className="testimonials-grid">
           {testimonials.map((item, index) => (
             <div key={item.id} className="testimonial-card" data-aos="zoom-in" data-aos-delay={index * 100} data-aos-duration="600">
-              <h3 className="testimonial-card-title">{item.title}</h3>
+              <h3 className="testimonial-card-title">{item.name || item.title}</h3>
+              {item.position && <span className="testimonial-position">{item.position}</span>}
               <p className="testimonial-card-text">{item.text}</p>
             </div>
           ))}

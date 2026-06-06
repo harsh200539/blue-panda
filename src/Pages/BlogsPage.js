@@ -7,6 +7,7 @@ import { blogService, siteService } from '../services/api';
 import blogsData from '../Data/blogsData';
 import SEO from '../Components/SEO';
 import { seoConfig } from '../config/seo-config';
+import { BLOG_CATEGORIES } from '../config/blog-categories';
 import './BlogsPage.css';
 
 const BlogsPage = () => {
@@ -16,7 +17,7 @@ const BlogsPage = () => {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [pageContent, setPageContent] = useState({});
 
-  const categories = ['All', 'Marketing', 'Design', 'Tech'];
+  const categories = ['All', ...BLOG_CATEGORIES];
 
   useEffect(() => {
     window.scrollTo(0, 0);

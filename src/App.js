@@ -7,6 +7,7 @@ import HomePage from './Components/HomePage';
 import AboutPage from './Components/AboutPage';
 import BlogsPage from './Pages/BlogsPage';
 import BlogDetailsPage from './Pages/BlogDetailsPage';
+import AdminPanel from './Pages/AdminPanel';
 
 function App() {
   useEffect(() => {
@@ -33,6 +34,7 @@ function App() {
         <Route path="/blogs" element={<BlogsPage />} />
         <Route path="/blog/:slug" element={<BlogDetailsPage />} />
         <Route path="/blogs/:slug" element={<BlogDetailsPage />} />
+        <Route path="/admin" element={<AdminPanel />} />
       </Routes>
     </Router>
   );
